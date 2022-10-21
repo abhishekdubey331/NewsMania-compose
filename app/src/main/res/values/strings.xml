@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="news_image_cd">News Banner Image</string>
+    <string name="more_info">Click to read more info</string>
+    <string name="retry">Retry</string>
+    <string name="error_message">Something is not right! Please check your internet connection. Tap on the button below to retry</string>
+
+</resources>

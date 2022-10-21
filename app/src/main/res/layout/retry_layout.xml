@@ -1,0 +1,27 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/error_message_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/content_margin"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="@string/error_message" />
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/content_margin"
+        android:background="@drawable/button_rounded"
+        android:text="@string/retry"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/news_title_font_size"
+        tools:text="Retry" />
+
+</merge>

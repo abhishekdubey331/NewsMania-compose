@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/content_padding"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/news_media_imv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/news_media_image_height"
+            android:contentDescription="@string/news_image_cd"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/news_author_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_transparent"
+            android:elevation="@dimen/card_elevation"
+            android:padding="@dimen/content_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textview_size_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/news_media_imv"
+            tools:text="Author Name" />
+
+        <TextView
+            android:id="@+id/news_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/content_padding"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/news_title_font_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/published_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_media_imv"
+            tools:text="Elon Musk says Tesla can't yet launch in India" />
+
+        <TextView
+            android:id="@+id/published_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/content_padding"
+            android:paddingLeft="@dimen/content_padding"
+            android:paddingRight="@dimen/content_padding"
+            android:textSize="@dimen/textview_size_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Tue, 11 Oct 2022 at 11:00 AM" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
