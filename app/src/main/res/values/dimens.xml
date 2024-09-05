@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="content_margin">16dp</dimen>
     <dimen name="content_padding">8dp</dimen>
-    <dimen name="read_more_padding">12dp</dimen>
     <dimen name="news_title_font_size">16sp</dimen>
-    <dimen name="news_detail_title_font_size">18sp</dimen>
-    <dimen name="news_detail_desc_font_size">16sp</dimen>
     <dimen name="textview_size_small">12sp</dimen>
     <dimen name="card_elevation">4dp</dimen>
     <dimen name="news_media_image_height">240dp</dimen>
