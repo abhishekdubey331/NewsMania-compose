@@ -41,7 +41,7 @@ The app follows Clean Architecture principles, ensuring clear separation of conc
 
 ## Screenshots
 
-> Include screenshots showcasing the main features and UI of the app.
+![NewsFeed Screenshot](https://github.com/abhishekdubey331/NewsMania/blob/main/Screenshot_1.png)
 
 ## Getting Started
 
