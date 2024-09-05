@@ -2,9 +2,7 @@ package com.clean.newsapp.di
 
 import com.clean.newsapp.data.repository.contract.NewsFeedRepository
 import com.clean.newsapp.domain.contract.GetNewsFeedUseCase
-import com.clean.newsapp.domain.contract.GetNewsItemByIdUseCase
 import com.clean.newsapp.domain.impl.GetNewsFeedUseCaseImpl
-import com.clean.newsapp.domain.impl.GetNewsItemByIdUseCaseImpl
 import com.clean.newsapp.util.NetworkStatusUtil
 import dagger.Module
 import dagger.Provides
@@ -23,13 +21,5 @@ object UseCaseModule {
         @IoDispatcher coroutineDispatcher: CoroutineDispatcher
     ): GetNewsFeedUseCase = GetNewsFeedUseCaseImpl(
         newsFeedRepository, networkStatusUtil, coroutineDispatcher
-    )
-
-    @Provides
-    fun getNewsItemByIdUseCase(
-        newsFeedRepository: NewsFeedRepository,
-        @IoDispatcher coroutineDispatcher: CoroutineDispatcher
-    ): GetNewsItemByIdUseCase = GetNewsItemByIdUseCaseImpl(
-        newsFeedRepository, coroutineDispatcher
     )
 }

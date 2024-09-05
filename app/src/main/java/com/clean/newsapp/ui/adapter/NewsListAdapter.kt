@@ -12,7 +12,7 @@ import com.clean.newsapp.util.DateTimeUtil
 import javax.inject.Inject
 
 class NewsListAdapter @Inject constructor(
-    private val dateTimeUtil: DateTimeUtil,
+    private val dateTimeUtil: DateTimeUtil? = null,
     private val newsItemListener: (Int) -> Unit
 ) : ListAdapter<NewsItem, NewsListAdapter.NewsViewHolder>(object :
     DiffUtil.ItemCallback<NewsItem>() {
@@ -38,7 +38,7 @@ class NewsListAdapter @Inject constructor(
             binding.newsMediaImv.loadImage(newsMediaImageUrl)
             binding.newsTitleTextview.text = title
             binding.newsAuthorTextview.text = author
-            binding.publishedTextview.text = dateTimeUtil.uiTimeFormat(publishedAt)
+            binding.publishedTextview.text = dateTimeUtil?.uiTimeFormat(publishedAt)
         }
         holder.itemView.setOnClickListener {
             newsItemListener.invoke(item.id)
