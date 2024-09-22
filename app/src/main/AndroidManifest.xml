@@ -14,7 +14,7 @@
         android:theme="@style/Theme.NewsMania">
 
         <activity
-            android:name="com.clean.newsapp.ui.parent.MainScreenActivity"
+            android:name="com.clean.newsapp.ui.MainScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

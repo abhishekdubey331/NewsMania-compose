@@ -8,6 +8,7 @@ import com.clean.newsapp.ui.feed.state.NewsFeedScreenState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -26,12 +27,12 @@ class NewsFeedViewModel @Inject constructor(
      */
     fun fetchNewsFeed() {
         viewModelScope.launch {
-            getNewsFeedUseCase().collect { result ->
+            getNewsFeedUseCase().collectLatest { result ->
                 _newsFeedScreenMutableState.update {
                     when (result) {
                         is ResultState.Loading -> NewsFeedScreenState.Loading
                         is ResultState.Success -> NewsFeedScreenState.Loaded(result.data)
-                        is ResultState.Failure -> NewsFeedScreenState.LoadFailed(result.errorMessage.orEmpty())
+                        is ResultState.Failure -> NewsFeedScreenState.LoadFailed(result.errorMessage)
                     }
                 }
             }

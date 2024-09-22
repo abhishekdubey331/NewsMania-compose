@@ -15,7 +15,7 @@ sealed interface NewsFeedScreenState {
     /**
      * The news feed state was unable to load.
      */
-    data class LoadFailed(val errorMessage: String) : NewsFeedScreenState
+    data class LoadFailed(val errorMessage: String?) : NewsFeedScreenState
 
     /**
      * The news feed has been successfully loaded with the list of news items.

@@ -1,4 +1,4 @@
-package com.clean.newsapp.ui.parent
+package com.clean.newsapp.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
